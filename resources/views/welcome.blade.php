@@ -30,8 +30,11 @@
                                     <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
                                 </div>
                                 <div id="register-link" class="text-right">
-                                    <!--<a href="{{ route('inicio') }}" class="text-info">Cadastrar-se</a>-->
+                                    <a href="#" class="text-info">Cadastrar-se</a>
                                 </div>
+                                <!-- <div class="text-right">
+                                    <a href="#" class="text-info">Cadastrar-se</a>
+                                </div> -->
                             </form>
                         </div>
                     </div>
