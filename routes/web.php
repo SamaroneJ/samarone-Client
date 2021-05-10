@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route::apiResource('login','App\Http\Controllers\loginController');
+
+
+
+Route::get('/inicio', function () {
+    return view('inicio');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
