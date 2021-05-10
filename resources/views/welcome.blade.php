@@ -1,9 +1,9 @@
 @php
     if (!isset($_SESSION)) session_start();
     if (isset($_SESSION['user']['logado']) && $_SESSION['user']['logado'] == true) {
-        echo "logado";
+        //echo "logado";
     }else{
-        echo "não logado";
+        //echo "não logado";
     }
 @endphp
 <!DOCTYPE html>

@@ -9,10 +9,10 @@
     if (!isset($_SESSION)) session_start();
     
     if (isset($_SESSION['user']) && $_SESSION['logado'] == true) {
-        echo "logado";
-        echo $_SESSION['user'];
+        //echo "logado";
+        //echo $_SESSION['user'];
     }else{
-        echo "LOGOU";
+        
         if($tipo != 99){
             $_SESSION['user'] = $user;
             $_SESSION['id'] = $id;
