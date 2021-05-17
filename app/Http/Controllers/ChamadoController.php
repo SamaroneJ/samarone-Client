@@ -68,8 +68,8 @@ class ChamadoController extends Controller
     public function show($id)
     {
         //echo 'show';
-        //$url = 'https://samarone-serv.herokuapp.com/api/chamado/'.$id;
-        $url = 'http://127.0.0.1:9000/api/chamado/'.$id.'&22';
+        $url = 'https://samarone-serv.herokuapp.com/api/chamado/'.$id.'&22';
+        //$url = 'http://127.0.0.1:9000/api/chamado/'.$id.'&22';
         //dd($url);
         $result = file_get_contents($url);
         $data = json_decode($result);
