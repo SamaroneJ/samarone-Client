@@ -17,3 +17,11 @@
 #login .container #login-row #login-column #login-box #login-form #register-link {
     margin-top: -85px;
 }
+
+.panel-heading{
+    font-size:150%;
+    
+}
+h11 {
+    color:red;
+}

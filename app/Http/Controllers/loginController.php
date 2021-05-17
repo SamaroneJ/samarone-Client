@@ -70,7 +70,23 @@ class loginController extends Controller
                 'user' => $data->Nome,
                 'token'=> $data->Token
             ];
-            return view('inicio', $dadosUser);
+            if($data->Tipo == 1){
+                $url = 'https://samarone-serv.herokuapp.com/api/addUser';
+                $result2 = file_get_contents($url);
+                $data2 = json_decode($result2);
+                return view('tela_adm',["usuario" => $dadosUser, "usuarios" => $data2]);
+            }elseif($data->Tipo == 2){
+                $url = 'https://samarone-serv.herokuapp.com/api/chamado/'.$data->ID.'&'.$data->Tipo;
+                $result2 = file_get_contents($url);
+                $data2 = json_decode($result2);
+                return view('tela_cid',["usuario" => $dadosUser, "chamados" => $data2]);
+            }else{
+                $url = 'https://samarone-serv.herokuapp.com/api/chamado/'.$data->ID.'&'.$data->Tipo;
+                $result2 = file_get_contents($url);
+                $data2 = json_decode($result2);
+                return view('tela_cid',["usuario" => $dadosUser, "chamados" => $data2]);
+            }
+            
         }else{
             return ($data->ERRO);
         }

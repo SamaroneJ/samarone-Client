@@ -1,26 +1,7 @@
 @php
-    $ok = 'Vazia';
-    if(!isset($tipo)){
-        $ok = 'tem';
-        $tipo = 99;
-        $user = '';
-    }
-
-    if (!isset($_SESSION)) session_start();
+    $tipo = 1;
+    $user = 1;
     
-    if (isset($_SESSION['user']) && $_SESSION['logado'] == true) {
-        //echo "logado";
-        //echo $_SESSION['user'];
-    }else{
-        
-        if($tipo != 99){
-            $_SESSION['user'] = $user;
-            $_SESSION['id'] = $id;
-            $_SESSION['tipo'] = $tipo;
-            $_SESSION['logado'] = true;
-            $_SESSION['token'] = $token;
-        }
-    }
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -33,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
     </head>
     <body class="body-login">
-        <nav class="navbar navbar-light bg-light">
+        <!--<nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="{{ asset('inicio') }}">Sistema de Prefeituras</a>
                 @empty($dados)
@@ -52,17 +33,9 @@
             @endif
             </div>
           </nav>
-        <div id="login">
+        <div id="login">-->
             <h3 class="text-center text-white pt-5">Primeira Tela</h3>
             
         </div>
     </body>
 </html>
-<script>
-    /*document.getElementById("sair").onclick = function (){
-        @php
-            session_destroy();
-        @endphp
-        alert('Sair');
-    }*/
-</script>

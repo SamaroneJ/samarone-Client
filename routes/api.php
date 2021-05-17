@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::apiResource('login','App\Http\Controllers\loginController');
 Route::apiResource('logout','App\Http\Controllers\LogoutController');
+Route::apiResource('addUser','App\Http\Controllers\addUserController');
+Route::apiResource('chamado','App\Http\Controllers\ChamadoController');
 
 
 

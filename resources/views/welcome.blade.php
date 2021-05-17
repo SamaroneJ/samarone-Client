@@ -1,10 +1,6 @@
 @php
     if (!isset($_SESSION)) session_start();
-    if (isset($_SESSION['user']['logado']) && $_SESSION['user']['logado'] == true) {
-        //echo "logado";
-    }else{
-        //echo "não logado";
-    }
+    session_destroy();
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -38,7 +34,7 @@
                                     <input onClick="enviar();" id="enviar" name="enviar" class="btn btn-info btn-md" value="Entrar">
                                 </div>
                                 <div id="register-link" class="text-right">
-                                    <a href="#" class="text-info">Cadastrar-se</a>
+                                    <a href="{{'/addUser'}}" class="text-info">Cadastrar-se</a>
                                 </div>
                                 <!-- <div class="text-right">
                                     <a href="#" class="text-info">Cadastrar-se</a>

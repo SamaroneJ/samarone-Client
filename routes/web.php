@@ -19,7 +19,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/inicio', function () {
     return view('inicio');
 });
-
+Route::get('/adm', function () {
+    return view('tela_adm');
+});
+Route::get('/cid', function () {
+    return view('tela_cid');
+});
+Route::get('/addUser', function () {
+    return view('addUser');
+});
+Route::get('/addChamado', function () {
+    return view('addChamado');
+});
 
 Route::get('/', function () {
     return view('welcome');
